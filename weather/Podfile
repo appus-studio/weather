@@ -1,0 +1,24 @@
+platform :ios, '11.0'
+
+target 'weather' do
+    use_frameworks!
+    
+    # Core
+    pod 'R.swift'
+    pod 'SwiftLint'
+    pod 'SwiftDate'
+    
+    # UI
+    pod 'IBAnimatable'
+    pod 'PKHUD'
+    
+    # Network
+    pod 'Alamofire'
+    pod 'Moya'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'CodableFirebase'
+    
+    pod 'Firebase/Auth'
+
+end
