@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFh-JR-k59">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="weathericons-regular-webfont.ttf">
+            <string>WeatherIcons-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Forecast-->
+        <scene sceneID="5yw-RJ-AcC">
+            <objects>
+                <viewController title="Forecast" id="dFh-JR-k59" customClass="ForecastViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yS-y8-KPi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PpD-4w-yU8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecastCell" rowHeight="64" id="7Ls-P6-aCP" customClass="ForecastCell" customModule="weather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Ls-P6-aCP" id="E16-7H-85W">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="q1v-xu-vdr">
+                                                    <rect key="frame" x="15" y="16" width="41.5" height="42"/>
+                                                    <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="27"/>
+                                                    <color key="textColor" name="Yellow"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16℃" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JN7-lF-bvd">
+                                                    <rect key="frame" x="235.5" y="16" width="69.5" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="textColor" name="Blue"/>
+                                                    <color key="highlightedColor" name="Blue"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VB7-Rp-z17">
+                                                    <rect key="frame" x="76.5" y="11" width="143" height="42"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Clear" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BrM-G1-QV2">
+                                                            <rect key="frame" x="0.0" y="25.5" width="42.5" height="16.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="highlightedColor" name="Blue"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:00" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hue-PG-rER">
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="highlightedColor" name="Blue"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="BrM-G1-QV2" secondAttribute="bottom" id="QSO-a4-z8M"/>
+                                                        <constraint firstItem="Hue-PG-rER" firstAttribute="leading" secondItem="VB7-Rp-z17" secondAttribute="leading" id="WEQ-Dj-ibJ"/>
+                                                        <constraint firstItem="BrM-G1-QV2" firstAttribute="leading" secondItem="VB7-Rp-z17" secondAttribute="leading" id="bGV-kl-rGU"/>
+                                                        <constraint firstItem="Hue-PG-rER" firstAttribute="top" secondItem="VB7-Rp-z17" secondAttribute="top" id="gyC-1U-oB8"/>
+                                                        <constraint firstItem="BrM-G1-QV2" firstAttribute="top" secondItem="Hue-PG-rER" secondAttribute="bottom" constant="4" id="mIu-yK-crI"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VB7-Rp-z17" firstAttribute="bottom" secondItem="E16-7H-85W" secondAttribute="bottomMargin" id="30a-wE-7yz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JN7-lF-bvd" secondAttribute="bottom" constant="5" id="80j-77-3FE"/>
+                                                <constraint firstItem="JN7-lF-bvd" firstAttribute="top" secondItem="E16-7H-85W" secondAttribute="topMargin" constant="5" id="Djx-uk-WMX"/>
+                                                <constraint firstItem="q1v-xu-vdr" firstAttribute="top" secondItem="E16-7H-85W" secondAttribute="topMargin" constant="5" id="Ifh-Sv-I7L"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JN7-lF-bvd" secondAttribute="trailing" id="Q9s-Nu-DpY"/>
+                                                <constraint firstItem="q1v-xu-vdr" firstAttribute="leading" secondItem="E16-7H-85W" secondAttribute="leadingMargin" id="TCJ-kW-DgO"/>
+                                                <constraint firstItem="VB7-Rp-z17" firstAttribute="top" secondItem="E16-7H-85W" secondAttribute="topMargin" id="bcX-Bu-E1w"/>
+                                                <constraint firstItem="VB7-Rp-z17" firstAttribute="leading" secondItem="q1v-xu-vdr" secondAttribute="trailing" constant="20" id="dnh-lA-DAW"/>
+                                                <constraint firstItem="JN7-lF-bvd" firstAttribute="leading" secondItem="VB7-Rp-z17" secondAttribute="trailing" constant="16" id="fLK-4M-5RP"/>
+                                                <constraint firstItem="q1v-xu-vdr" firstAttribute="bottom" secondItem="E16-7H-85W" secondAttribute="bottomMargin" constant="5" id="lN0-u4-8Jb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tempLabel" destination="JN7-lF-bvd" id="HBl-v1-4Gw"/>
+                                            <outlet property="timeLabel" destination="Hue-PG-rER" id="7UE-9i-qqI"/>
+                                            <outlet property="weatherDescriptioneLabel" destination="BrM-G1-QV2" id="WGm-9D-OrA"/>
+                                            <outlet property="weatherIconLabel" destination="q1v-xu-vdr" id="Hwh-Cj-UWQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dFh-JR-k59" id="ire-Cn-mYQ"/>
+                                    <outlet property="delegate" destination="dFh-JR-k59" id="T9d-7k-Ddf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PpD-4w-yU8" firstAttribute="trailing" secondItem="pQc-7P-Kzz" secondAttribute="trailing" id="J3i-GC-Bc4"/>
+                            <constraint firstItem="PpD-4w-yU8" firstAttribute="bottom" secondItem="pQc-7P-Kzz" secondAttribute="bottom" id="Mgr-3N-lU1"/>
+                            <constraint firstItem="PpD-4w-yU8" firstAttribute="leading" secondItem="pQc-7P-Kzz" secondAttribute="leading" id="NeQ-Rh-zcw"/>
+                            <constraint firstItem="PpD-4w-yU8" firstAttribute="top" secondItem="8yS-y8-KPi" secondAttribute="top" id="b7T-iH-bVw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pQc-7P-Kzz"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="PpD-4w-yU8" id="Y3W-r2-izP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wH-bz-g6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250.40000000000001" y="92.203898050974516"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.23921568627450981" green="0.6470588235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Yellow">
+            <color red="1" green="0.79607843137254897" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

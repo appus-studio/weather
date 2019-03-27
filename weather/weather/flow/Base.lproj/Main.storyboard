@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qSO-lg-QLT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Forecast-->
+        <scene sceneID="Su4-dE-ouS">
+            <objects>
+                <viewController title="Forecast" id="JwR-wm-4jM" customClass="Forecast" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WXW-a9-mga">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7LO-6w-Jyd"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Forecast" image="wi-night-alt-cloudy" id="NTm-dK-mXV"/>
+                    <navigationItem key="navigationItem" title="Forecast" id="G9G-MS-M06"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5C-Ez-uus" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="78"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Wp5-TD-aO6">
+            <objects>
+                <navigationController id="woi-wx-0XL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="mEG-Y4-eA2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4qt-rI-ST0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lvr-9Z-x7n" kind="relationship" relationship="rootViewController" id="3HW-2P-pDR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szB-Tz-AaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-988" y="-588"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="7Ef-x1-wY7">
+            <objects>
+                <viewController title="Today" id="Lvr-9Z-x7n" customClass="Today" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Gv-cA-PDa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SBT-xM-cVg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Today" image="wi-day-sunny" id="Od3-ex-wvE"/>
+                    <navigationItem key="navigationItem" title="Today" id="zsI-LN-meC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DO0-M2-xVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="-587"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gnF-Go-n7g">
+            <objects>
+                <tabBarController id="qSO-lg-QLT" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dRf-N7-ifZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="woi-wx-0XL" kind="relationship" relationship="viewControllers" id="1nv-PU-MmE"/>
+                        <segue destination="K2E-F2-CI8" kind="relationship" relationship="viewControllers" id="Zx3-B9-ahg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuM-Fm-YsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2612" y="-257"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="gI9-n0-qD2">
+            <objects>
+                <navigationController id="K2E-F2-CI8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hV6-7W-SRx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XGp-WN-0C5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JwR-wm-4jM" kind="relationship" relationship="rootViewController" id="rjY-ZD-hBw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8V-Pk-gsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-988" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wi-day-sunny" width="22" height="22"/>
+        <image name="wi-night-alt-cloudy" width="22" height="17"/>
+    </resources>
+</document>

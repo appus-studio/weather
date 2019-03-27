@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityWeatherView" customModule="weather" customModuleProvider="target">
+            <connections>
+                <outlet property="locationNameLabel" destination="YmO-sd-k3q" id="BYQ-0a-2VQ"/>
+                <outlet property="weatherIcon" destination="uc4-Kn-Dze" id="57J-61-Cxu"/>
+                <outlet property="weatherLabel" destination="H4k-vi-g3a" id="AMK-ju-6m5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="371"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="IjV-tE-GUX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="371"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc4-Kn-Dze" customClass="OpenWeatherMapIcon" customModule="weather" customModuleProvider="target">
+                            <rect key="frame" x="70.5" y="0.0" width="234" height="215"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                    <color key="value" name="Yellow"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="weatherID">
+                                    <integer key="value" value="300"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="CCJ-ob-PdY">
+                            <rect key="frame" x="117" y="242" width="141" height="129"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London, UK" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YmO-sd-k3q">
+                                    <rect key="frame" x="0.0" y="0.0" width="141" height="51"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 | Sunny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4k-vi-g3a">
+                                    <rect key="frame" x="0.0" y="78" width="141" height="51"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                    <color key="textColor" name="Blue"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" red="0.23921568627450979" green="0.6470588235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="H4k-vi-g3a" firstAttribute="height" secondItem="YmO-sd-k3q" secondAttribute="height" id="Bug-Zk-oPd"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="CCJ-ob-PdY" firstAttribute="height" secondItem="uc4-Kn-Dze" secondAttribute="height" multiplier="0.6" id="dxn-cq-mvH"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IjV-tE-GUX" secondAttribute="trailing" id="Fv7-JW-bb3"/>
+                <constraint firstItem="IjV-tE-GUX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Q0q-zk-Kvg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IjV-tE-GUX" secondAttribute="bottom" id="gFt-Vy-mOs"/>
+                <constraint firstItem="IjV-tE-GUX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yAT-xl-ub2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="360.80000000000001" y="-13.043478260869566"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.23921568627450981" green="0.6470588235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Yellow">
+            <color red="1" green="0.79607843137254897" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

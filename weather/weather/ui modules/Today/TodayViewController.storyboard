@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFh-JR-k59">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today-->
+        <scene sceneID="5yw-RJ-AcC">
+            <objects>
+                <viewController title="Today" id="dFh-JR-k59" customClass="TodayViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yS-y8-KPi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWr-fT-BAD" customClass="CityWeatherView" customModule="weather" customModuleProvider="target">
+                                <rect key="frame" x="25" y="69" width="364" height="269"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="weatherId">
+                                        <integer key="value" value="500"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="CUh-RB-MQV">
+                                <rect key="frame" x="0.0" y="377" width="414" height="134"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVa-xe-fxq" customClass="WeatherparametrView" customModule="weather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="134"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconText" value=""/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="parametrText" value="25"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRr-0r-L79" customClass="WeatherparametrView" customModule="weather" customModuleProvider="target">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="134"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconText" value=""/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="parametrText" value="65%"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TS8-f0-ScP" customClass="WeatherparametrView" customModule="weather" customModuleProvider="target">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="134"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconText" value=""/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="parametrText" value="25"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TS8-f0-ScP" firstAttribute="height" secondItem="pRr-0r-L79" secondAttribute="height" id="F4l-Z9-U2c"/>
+                                    <constraint firstItem="pRr-0r-L79" firstAttribute="width" secondItem="TS8-f0-ScP" secondAttribute="width" id="hL3-tB-Amp"/>
+                                    <constraint firstItem="rVa-xe-fxq" firstAttribute="width" secondItem="pRr-0r-L79" secondAttribute="width" id="kWR-J1-RKW"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="EZ7-FI-rnP">
+                                <rect key="frame" x="0.0" y="518" width="414" height="134.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nir-PO-u7f" customClass="WeatherparametrView" customModule="weather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="202.5" height="134.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconText" value=""/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="parametrText" value="25"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMl-G7-Vtu" customClass="WeatherparametrView" customModule="weather" customModuleProvider="target">
+                                        <rect key="frame" x="211.5" y="0.0" width="202.5" height="134.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconText" value=""/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="parametrText" value="25"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nir-PO-u7f" firstAttribute="width" secondItem="kMl-G7-Vtu" secondAttribute="width" id="RKw-td-J4j"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sy2-jB-D6r">
+                                <rect key="frame" x="167" y="786" width="80" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareAction:" destination="dFh-JR-k59" eventType="touchUpInside" id="Lni-A5-KsD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EZ7-FI-rnP" firstAttribute="top" secondItem="CUh-RB-MQV" secondAttribute="bottom" constant="7" id="0p2-yi-f9c"/>
+                            <constraint firstItem="AWr-fT-BAD" firstAttribute="leading" secondItem="pQc-7P-Kzz" secondAttribute="leading" constant="25" id="MQe-Oo-WDt"/>
+                            <constraint firstItem="AWr-fT-BAD" firstAttribute="top" secondItem="pQc-7P-Kzz" secondAttribute="top" constant="25" id="Nea-2t-z5M"/>
+                            <constraint firstItem="EZ7-FI-rnP" firstAttribute="leading" secondItem="pQc-7P-Kzz" secondAttribute="leading" id="QPf-F0-vqH"/>
+                            <constraint firstItem="CUh-RB-MQV" firstAttribute="height" secondItem="8yS-y8-KPi" secondAttribute="height" multiplier="0.15" id="TuY-Ts-rOR"/>
+                            <constraint firstItem="AWr-fT-BAD" firstAttribute="height" secondItem="8yS-y8-KPi" secondAttribute="height" multiplier="0.3" id="UW9-Sy-SRB"/>
+                            <constraint firstItem="EZ7-FI-rnP" firstAttribute="height" secondItem="8yS-y8-KPi" secondAttribute="height" multiplier="0.15" id="bgI-p4-SaX"/>
+                            <constraint firstItem="pQc-7P-Kzz" firstAttribute="trailing" secondItem="AWr-fT-BAD" secondAttribute="trailing" constant="25" id="bkk-Jk-E2Y"/>
+                            <constraint firstItem="CUh-RB-MQV" firstAttribute="leading" secondItem="pQc-7P-Kzz" secondAttribute="leading" id="cF8-00-g0z"/>
+                            <constraint firstItem="CUh-RB-MQV" firstAttribute="trailing" secondItem="pQc-7P-Kzz" secondAttribute="trailing" id="ftM-Y1-Gm6"/>
+                            <constraint firstItem="EZ7-FI-rnP" firstAttribute="trailing" secondItem="pQc-7P-Kzz" secondAttribute="trailing" id="k6e-UK-ejm"/>
+                            <constraint firstItem="sy2-jB-D6r" firstAttribute="centerX" secondItem="8yS-y8-KPi" secondAttribute="centerX" id="ks9-J5-NN5"/>
+                            <constraint firstItem="pQc-7P-Kzz" firstAttribute="bottom" secondItem="sy2-jB-D6r" secondAttribute="bottom" constant="25" id="weh-gK-Va6"/>
+                            <constraint firstItem="CUh-RB-MQV" firstAttribute="top" secondItem="AWr-fT-BAD" secondAttribute="bottom" constant="39" id="x7G-b4-c53"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pQc-7P-Kzz"/>
+                    </view>
+                    <connections>
+                        <outlet property="humidityView" destination="rVa-xe-fxq" id="Fw1-7Q-6BZ"/>
+                        <outlet property="mainView" destination="AWr-fT-BAD" id="MzG-kq-1gA"/>
+                        <outlet property="precipitationView" destination="pRr-0r-L79" id="fIm-gd-s1F"/>
+                        <outlet property="pressureView" destination="TS8-f0-ScP" id="bpF-X5-dNz"/>
+                        <outlet property="shareButton" destination="sy2-jB-D6r" id="RCi-zf-2sW"/>
+                        <outlet property="windDIrectionView" destination="kMl-G7-Vtu" id="cdN-o3-fA8"/>
+                        <outlet property="windSpeedView" destination="Nir-PO-u7f" id="I0S-aq-Lwx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wH-bz-g6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250.72463768115944" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+</document>
